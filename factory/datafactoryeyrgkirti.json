@@ -1,0 +1,9 @@
+{
+	"name": "datafactoryeyrgkirti",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "50c5951c-eee8-448c-bbfa-fe4dab01688d",
+		"tenantId": "44c612f6-4e0e-4035-a306-7285fc49d9a2"
+	}
+}
