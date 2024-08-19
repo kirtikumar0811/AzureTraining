@@ -2,7 +2,7 @@
 	"name": "DS_AzureSQL_retailDB_Users",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_AzureSqlDatabase_retailDB",
+			"referenceName": "LS_AzureSQLDatabase_retail_db",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
