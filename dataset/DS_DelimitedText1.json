@@ -2,7 +2,7 @@
 	"name": "DS_DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_AzureDataLakeStorage",
+			"referenceName": "LS_AzureDataLakeStorage_azurestorageacctraining",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
