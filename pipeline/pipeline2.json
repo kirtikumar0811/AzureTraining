@@ -41,6 +41,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity( 'Lookup1' ).output.value",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Append variable1",
@@ -49,7 +53,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "filename",
-								"value": "@activity(\n'Lookup1'\n).output.value"
+								"value": {
+									"value": "@item().name",
+									"type": "Expression"
+								}
 							}
 						}
 					]
