@@ -43,14 +43,14 @@
 				"typeProperties": {
 					"activities": [
 						{
-							"name": "Set variable2",
-							"type": "SetVariable",
+							"name": "Append variable1",
+							"type": "AppendVariable",
 							"dependsOn": [],
-							"policy": {
-								"secureOutput": false,
-								"secureInput": false
-							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "filename",
+								"value": "@activity(\n'Lookup1'\n).output.value"
+							}
 						}
 					]
 				}
