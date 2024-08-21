@@ -81,7 +81,7 @@
 				"typeProperties": {
 					"variableName": "listOfNames",
 					"value": {
-						"value": "@variables('filename')",
+						"value": "@variables('listOfNames')",
 						"type": "Expression"
 					}
 				}
@@ -92,6 +92,9 @@
 				"type": "Array"
 			},
 			"listOfNames": {
+				"type": "Array"
+			},
+			"Email": {
 				"type": "Array"
 			}
 		},
