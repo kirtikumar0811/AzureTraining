@@ -84,6 +84,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Append variable1",
@@ -119,9 +123,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "name",
-					"value": [
-						""
-					]
+					"value": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					}
 				}
 			}
 		],
