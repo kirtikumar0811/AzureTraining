@@ -68,7 +68,7 @@
 										"typeProperties": {
 											"variableName": "PDFFN",
 											"value": {
-												"value": "@contains(activity('Get Metadata1').output.childItems,'pdf')",
+												"value": "@activity('Get Metadata1').output.childItems",
 												"type": "Expression"
 											}
 										}
