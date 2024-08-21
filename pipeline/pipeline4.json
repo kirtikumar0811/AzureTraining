@@ -17,13 +17,7 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DS_AzureDataLakeStorage_Identify",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": {
-								"value": "@variables('name')",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"childItems"
@@ -95,7 +89,7 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "name",
+								"variableName": "csvFN",
 								"value": {
 									"value": "@concat(item().name,'|')",
 									"type": "Expression"
@@ -104,34 +98,13 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "ForEach1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "name",
-					"value": {
-						"value": "@activity('Get Metadata1').output.childItems",
-						"type": "Expression"
-					}
-				}
 			}
 		],
 		"variables": {
-			"name": {
+			"csvFN": {
+				"type": "Array"
+			},
+			"PDFFN": {
 				"type": "Array"
 			}
 		},
