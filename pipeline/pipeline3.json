@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "Select * from dbo.users",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -60,10 +61,37 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "listOfNames",
+					"value": {
+						"value": "@variables('filename')",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"variables": {
 			"filename": {
+				"type": "Array"
+			},
+			"listOfNames": {
 				"type": "Array"
 			}
 		},
