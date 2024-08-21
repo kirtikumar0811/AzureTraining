@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "Select * from dbo.users",
+						"sqlReaderQuery": "Select top 5 * from dbo.users",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -54,7 +54,7 @@
 							"typeProperties": {
 								"variableName": "filename",
 								"value": {
-									"value": "@item().filename",
+									"value": "@item().name",
 									"type": "Expression"
 								}
 							}
