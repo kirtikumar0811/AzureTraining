@@ -54,7 +54,7 @@
 							"typeProperties": {
 								"variableName": "filename",
 								"value": {
-									"value": "@item().name",
+									"value": "@concat(item().name,'-',item().Email)",
 									"type": "Expression"
 								}
 							}
@@ -81,7 +81,7 @@
 				"typeProperties": {
 					"variableName": "listOfNames",
 					"value": {
-						"value": "@variables('listOfNames')",
+						"value": "@variables('filename')",
 						"type": "Expression"
 					}
 				}
