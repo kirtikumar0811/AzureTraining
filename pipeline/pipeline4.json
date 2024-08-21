@@ -84,16 +84,41 @@
 					},
 					"activities": [
 						{
-							"name": "Append variable1",
-							"type": "AppendVariable",
+							"name": "If Condition1",
+							"type": "IfCondition",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "csvFN",
-								"value": {
-									"value": "@concat(item().name,'|')",
-									"type": "Expression"
-								}
+								"ifFalseActivities": [
+									{
+										"name": "Append variable2",
+										"type": "AppendVariable",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "PDFFN",
+											"value": {
+												"value": "@contains(activity('Get Metadata1').output.childItems,'pdf')",
+												"type": "Expression"
+											}
+										}
+									}
+								],
+								"ifTrueActivities": [
+									{
+										"name": "Append variable1",
+										"type": "AppendVariable",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "csvFN",
+											"value": {
+												"value": "@contains(activity('Get Metadata1').output.childItems,'csv' )",
+												"type": "Expression"
+											}
+										}
+									}
+								]
 							}
 						}
 					]
