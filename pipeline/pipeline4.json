@@ -32,40 +32,6 @@
 				}
 			},
 			{
-				"name": "Lookup1",
-				"type": "Lookup",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"wildcardFileName": "*",
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
-					},
-					"dataset": {
-						"referenceName": "DS_AzureDataLakeStorage_Identify",
-						"type": "DatasetReference"
-					},
-					"firstRowOnly": false
-				}
-			},
-			{
 				"name": "ForEach1",
 				"type": "ForEach",
 				"dependsOn": [
@@ -89,6 +55,10 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
+								"expression": {
+									"value": "@contains(item().name,'csv')",
+									"type": "Expression"
+								},
 								"ifFalseActivities": [
 									{
 										"name": "Append variable2",
@@ -113,7 +83,7 @@
 										"typeProperties": {
 											"variableName": "csvFN",
 											"value": {
-												"value": "@contains(activity('Get Metadata1').output.childItems,'csv' )",
+												"value": "@activity('Get Metadata1').output.childItems",
 												"type": "Expression"
 											}
 										}
