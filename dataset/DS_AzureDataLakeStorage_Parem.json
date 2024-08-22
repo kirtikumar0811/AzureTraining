@@ -5,6 +5,11 @@
 			"referenceName": "LS_AzureDataLakeStorage_azurestorageacctraining",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"filenameDS": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
