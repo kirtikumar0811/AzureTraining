@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS_AzureDataLakeStorage_Identify",
+						"referenceName": "DS_AzureDataLakeStorage_CopyAllFiles_Retaildb_customerscsv",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
