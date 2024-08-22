@@ -84,6 +84,26 @@
 									"type": "DelimitedTextReadSettings"
 								}
 							}
+						},
+						{
+							"name": "Append variable1",
+							"type": "AppendVariable",
+							"dependsOn": [
+								{
+									"activity": "Get Metadata2",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "FNwithSize",
+								"value": {
+									"value": "@concat(String(activity('Get Metadata2').output.itemName),'-',String(activity('Get Metadata2').output.size))",
+									"type": "Expression"
+								}
+							}
 						}
 					]
 				}
