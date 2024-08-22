@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS_AzureDataLakeStorage_Parem",
+						"referenceName": "DS_AzureDataLakeStorage_Identify",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
