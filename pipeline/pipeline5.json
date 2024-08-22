@@ -89,6 +89,14 @@
 				}
 			}
 		],
+		"variables": {
+			"FNwithSize": {
+				"type": "Array"
+			},
+			"FinalOutput": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
