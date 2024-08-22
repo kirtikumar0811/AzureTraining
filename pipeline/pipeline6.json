@@ -26,7 +26,7 @@
 					"storedProcedureParameters": {
 						"id": {
 							"value": {
-								"value": "@int(activity('Lookup1').output)",
+								"value": "@activity('Lookup1').output",
 								"type": "Expression"
 							},
 							"type": "Int32"
