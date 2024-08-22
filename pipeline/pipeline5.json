@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS_AzureDataLakeStorage_Identify",
+						"referenceName": "DS_AzureDataLakeStorage_Parem",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -47,72 +47,7 @@
 					"items": {
 						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
-					},
-					"activities": [
-						{
-							"name": "If Condition1",
-							"type": "IfCondition",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"expression": {
-									"value": "@contains(item().name,'csv')",
-									"type": "Expression"
-								},
-								"ifFalseActivities": [
-									{
-										"name": "Append variable2",
-										"type": "AppendVariable",
-										"dependsOn": [],
-										"userProperties": [],
-										"typeProperties": {
-											"variableName": "PDFFN",
-											"value": {
-												"value": "@activity('Get Metadata1').output.childItems",
-												"type": "Expression"
-											}
-										}
-									}
-								],
-								"ifTrueActivities": [
-									{
-										"name": "Append variable1",
-										"type": "AppendVariable",
-										"dependsOn": [],
-										"userProperties": [],
-										"typeProperties": {
-											"variableName": "csvFN",
-											"value": {
-												"value": "@activity('Get Metadata1').output.childItems",
-												"type": "Expression"
-											}
-										}
-									}
-								]
-							}
-						}
-					]
-				}
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "ForEach1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
 					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "csvFN",
-					"value": ""
 				}
 			}
 		],
