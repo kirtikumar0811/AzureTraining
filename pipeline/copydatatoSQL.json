@@ -53,11 +53,22 @@
 				"outputs": [
 					{
 						"referenceName": "DS_AzureSQLDB",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"tablename": {
+								"value": "@variables('filename')",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
+		"variables": {
+			"filename": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
