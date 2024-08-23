@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "users_001.csv",
 				"fileSystem": "containereykirti"
 			},
 			"columnDelimiter": ",",
