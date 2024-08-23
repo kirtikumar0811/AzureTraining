@@ -50,25 +50,13 @@
 				"inputs": [
 					{
 						"referenceName": "DS_convertedtocsvfromjson",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": {
-								"value": "@variables('filename')",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "DS_AzureSQLDB",
-						"type": "DatasetReference",
-						"parameters": {
-							"tablename": {
-								"value": "@variables('filename')",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
