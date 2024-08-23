@@ -16,10 +16,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": {
-				"value": "\"users\"",
-				"type": "Expression"
-			}
+			"table": "inactive_customers"
 		}
 	}
 }
