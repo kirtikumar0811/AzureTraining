@@ -50,7 +50,13 @@
 				"inputs": [
 					{
 						"referenceName": "DS_convertedtocsvfromjson",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": {
+								"value": "@variables('filename')",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
